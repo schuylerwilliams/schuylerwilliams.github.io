@@ -7,6 +7,14 @@
 
 }
 
+canvas {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 50vw;
+  height: 50vh;
+}
+
 #box {
 	position: absolute;
   	width: 50px;
