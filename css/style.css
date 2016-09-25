@@ -7,12 +7,12 @@
 
 }
 
-canvas {
+#c {
   position: absolute;
   top:0;
   left:0;
-  width: 50vw;
-  height: 50vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 #box {
@@ -26,7 +26,20 @@ canvas {
   	border-radius: 50%;
   	z-index: 9;
   	cursor: none;
+  	animation-name: changeCircle;
+  	animation-duration: 1s;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+  	animation-timing-function: linear;
   	-webkit-backface-visibility: hidden;
+}
+
+@keyframes changeCircle {
+    0%   {width: 50px; height:50px;}
+    25%  {width: 60px; height:60px;}
+    50%  {width: 70px; height:70px;}
+    75%  {width: 80px; height:80px;}
+    100% {width: 100px; height:100px;}
 }
 
 #boxOne {
@@ -37,8 +50,8 @@ canvas {
 	height: 50vh;
 	background: transparent;
 	text-align: center;
-	border-bottom: 2px solid black;
-	border-right: 2px solid black;
+	border-bottom: 5px solid #2471A3;
+	border-right: 5px solid #2471A3;
 	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
@@ -55,8 +68,8 @@ canvas {
 	height: 50vh;
 	background: transparent;
 	text-align: center;
-	border-right: 2px solid black;
-	border-top: 2px solid black;
+	border-top: 5px solid #1ABC9C;
+	border-right: 5px solid #1ABC9C;
 	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
@@ -72,8 +85,8 @@ canvas {
 	width: 50%;
 	height: 50vh;
 	background: transparent;
-	border-left: 2px solid black;
-	border-bottom: 2px solid black;
+	border-bottom: 5px solid #E74C3C;
+	border-left: 5px solid #E74C3C;
 	text-align: center;
 	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
@@ -91,8 +104,8 @@ canvas {
 	height: 50vh;
 	background: transparent;
 	text-align: center;
-	border-left: 2px solid black;
-	border-top: 2px solid black;
+	border-top: 5px solid #1E8449;
+	border-left: 5px solid #1E8449;
 	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
@@ -104,6 +117,7 @@ canvas {
 .h1BoxText {
 	height: 200px;
 	line-height: 200px;
+	font-size: 50px;
 }
 
 #testDiv {

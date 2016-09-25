@@ -7,8 +7,23 @@ function moveBox (e) {
 }
 $(window).on('mousemove', moveBox);
 
+
+
+
+
+
+
+
 function changeBoxBackground(id) {
-	document.getElementById(id).style.background = "#2471A3";
+	if (id=="boxOne") {
+		document.getElementById("box").style.background = "#2471A3";
+	} else if(id=="boxTwo") {
+		document.getElementById("box").style.background = "#1ABC9C";
+	} else if(id=="boxThree") {
+		document.getElementById("box").style.background = "#E74C3C";
+	} else if(id=="boxFour") {
+		document.getElementById("box").style.background = "#1E8449";
+	}
 }
 
 function outBoxBackground(id) {
