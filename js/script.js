@@ -31,6 +31,12 @@ function clickBoxBackground(id) {
 		document.getElementById("boxTwo").style.border = "0px solid transparent";
 		document.getElementById("boxThree").style.border = "0px solid transparent";
 		document.getElementById("boxFour").style.border = "0px solid transparent";
+		
+		var node = document.createElement("DIV");                
+		var textnode = document.createTextNode("Hello World!");         
+		node.appendChild(textnode);                             
+		node.setAttribute("id", "testDiv");
+		document.getElementById("myBody").appendChild(node);
 	
 	} else if (id=="boxTwo") {
 		history.pushState("boxTwo", "boxTwo", "index.html");
