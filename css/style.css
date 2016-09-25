@@ -17,6 +17,7 @@
   	background: tomato;
   	border-radius: 50%;
   	z-index: 9;
+  	cursor: none;
   	-webkit-backface-visibility: hidden;
 }
 
@@ -30,7 +31,7 @@
 	text-align: center;
 	border-bottom: 2px solid black;
 	border-right: 2px solid black;
-	cursor: pointer;
+	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
@@ -48,7 +49,7 @@
 	text-align: center;
 	border-right: 2px solid black;
 	border-top: 2px solid black;
-	cursor: pointer;
+	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
@@ -66,7 +67,7 @@
 	border-left: 2px solid black;
 	border-bottom: 2px solid black;
 	text-align: center;
-	cursor: pointer;
+	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
@@ -84,7 +85,7 @@
 	text-align: center;
 	border-left: 2px solid black;
 	border-top: 2px solid black;
-	cursor: pointer;
+	cursor: none;
 	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
