@@ -3,15 +3,30 @@
 	font-family: 'Istok Web', sans-serif;  /*Istok */
 	 /*font-family: 'Arvo', serif;  /*Arvo */
 	 /*font-family: 'Cabin', sans-serif; Cabin */
+	background: #fff;
 
 }
+
+#box {
+	position: absolute;
+  	width: 50px;
+  	height: 50px;
+  	top: 50%;
+  	left: 50%;
+  	margin: -25px 0 0 -25px;
+  	background: tomato;
+  	border-radius: 50%;
+  	z-index: 9;
+  	-webkit-backface-visibility: hidden;
+}
+
 #boxOne {
 	position: absolute;
 	top:0;
 	left:0;
 	width: 50%;
 	height: 50vh;
-	background: #fff;
+	background: transparent;
 	text-align: center;
 	border-bottom: 2px solid black;
 	border-right: 2px solid black;
@@ -20,6 +35,7 @@
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
 	transition: background .25s, width .5s, height .5s, top .5s;
+	z-index: 10;
 }
 
 #boxTwo {
@@ -28,7 +44,7 @@
 	left: 0;
 	width: 50%;
 	height: 50vh;
-	background: #fff;
+	background: transparent;
 	text-align: center;
 	border-right: 2px solid black;
 	border-top: 2px solid black;
@@ -37,6 +53,7 @@
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
 	transition: background .25s, width .5s, height .5s, top .5s;
+	z-index: 10;
 }
 
 #boxThree {
@@ -45,7 +62,7 @@
 	right: 0;
 	width: 50%;
 	height: 50vh;
-	background: #fff;
+	background: transparent;
 	border-left: 2px solid black;
 	border-bottom: 2px solid black;
 	text-align: center;
@@ -54,6 +71,7 @@
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
 	transition: background .25s, width .5s, height .5s, top .5s;
+	z-index: 10;
 }
 
 #boxFour {
@@ -62,7 +80,7 @@
 	right: 0;
 	width: 50%;
 	height: 50vh;
-	background: #fff;
+	background: transparent;
 	text-align: center;
 	border-left: 2px solid black;
 	border-top: 2px solid black;
@@ -71,6 +89,7 @@
 	-moz-transition: background .25s, width .5s, height .5s, top .5s;
 	-o-transition: background .25s, width .5s, height .5s, top .5s;
 	transition: background .25s, width .5s, height .5s, top .5s;
+	z-index: 10;
 }
 
 .h1BoxText {
