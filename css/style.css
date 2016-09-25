@@ -1,0 +1,68 @@
+
+#boxOne {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 50%;
+	height: 50vh;
+	background: #fff;
+	text-align: center;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	cursor: pointer;
+	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
+	-moz-transition: background .25s, width .5s, height .5s, top .5s;
+	-o-transition: background .25s, width .5s, height .5s, top .5s;
+	transition: background .25s, width .5s, height .5s, top .5s;
+}
+
+#boxTwo {
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	width: 50%;
+	height: 50vh;
+	background: #fff;
+	text-align: center;
+	border-right: 2px solid black;
+	border-top: 2px solid black;
+	cursor: pointer;
+	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
+	-moz-transition: background .25s, width .5s, height .5s, top .5s;
+	-o-transition: background .25s, width .5s, height .5s, top .5s;
+	transition: background .25s, width .5s, height .5s, top .5s;
+}
+
+#boxThree {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 50vh;
+	background: #fff;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
+	-moz-transition: background .25s, width .5s, height .5s, top .5s;
+	-o-transition: background .25s, width .5s, height .5s, top .5s;
+	transition: background .25s, width .5s, height .5s, top .5s;
+}
+
+#boxFour {
+	position: absolute;
+	top: 50vh;
+	right: 0;
+	width: 50%;
+	height: 50vh;
+	background: #fff;
+	text-align: center;
+	border-left: 2px solid black;
+	border-top: 2px solid black;
+	cursor: pointer;
+	-webkit-transition: background .25s, width .5s, height .5s, top .5s;
+	-moz-transition: background .25s, width .5s, height .5s, top .5s;
+	-o-transition: background .25s, width .5s, height .5s, top .5s;
+	transition: background .25s, width .5s, height .5s, top .5s;
+}
