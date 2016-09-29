@@ -19,3 +19,7 @@ function changeMenuClick(source) {
 		window.open("contact", "_self");
 	}
 }
+
+function clickedTheImage(source) {
+	window.open("https://schuylerwilliams.github.io");
+}
