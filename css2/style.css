@@ -7,7 +7,13 @@
 #test div {
 	display: inline;
 }
+
+.subDate {
+	font-size: 12px;
+	color: #808B96;
+}
 /*
+#154360; supa dark
 #2E86C1; darker
 #3498DB; dark
 #5DADE2; light
