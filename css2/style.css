@@ -1,10 +1,40 @@
 
 #myBody {
-
-
+	padding-top: 70px;
 }
 
 
 #test div {
 	display: inline;
+}
+/*
+#2E86C1; darker
+#3498DB; dark
+#5DADE2; light
+*/
+#menuItem01 {
+	cursor:pointer;
+	color: #2E86C1;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+}
+
+#menuItem02 {
+	cursor: pointer;
+	color: #2E86C1;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+}
+
+#menuItem03 {
+	cursor: pointer;
+	color: #2E86C1;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
 }
