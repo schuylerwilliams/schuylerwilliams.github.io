@@ -16,6 +16,6 @@ function changeMenuClick(source) {
 	} else if (source == "menuItem02") {
 		window.open("resume", "_self");
 	} else if (source == "menuItem03") {
-		window.open("contact", "_self");
+		window.open("getintouch.html", "_self");
 	}
 }
