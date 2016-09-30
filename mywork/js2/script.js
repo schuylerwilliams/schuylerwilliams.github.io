@@ -30,10 +30,14 @@ function changeMenuOut(source) {
 
 function changeMenuClick(source) {
 	if (source == "menuItem01") {
-		window.open("mywork", "_self");
+		window.open("https://schuylerwilliams.github.io/mywork/", "_self");
 	} else if (source == "menuItem02") {
-		window.open("resume", "_self");
+		window.open("https://schuylerwilliams.github.io/resume/", "_self");
 	} else if (source == "menuItem03") {
-		window.open("contact", "_self");
+		window.open("https://schuylerwilliams.github.io/contact/", "_self");
 	}
+}
+
+function clickedTheImage(source) {
+	window.open("https://schuylerwilliams.github.io");
 }
