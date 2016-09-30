@@ -55,8 +55,9 @@
 	transition: color .25s;
 }
 
-
-
+#theImage {
+	cursor:pointer;
+}
 
 
 

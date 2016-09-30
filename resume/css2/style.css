@@ -54,3 +54,7 @@
 	-o-transition: color .25s;
 	transition: color .25s;
 }
+
+#theImage {
+	cursor:pointer;
+}
