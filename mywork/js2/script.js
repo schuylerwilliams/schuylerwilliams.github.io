@@ -43,3 +43,25 @@ function changeMenuClick(source) {
 function clickedTheImage(source) {
 	window.open("https://schuylerwilliams.github.io");
 }
+
+
+
+
+
+function openMyModal(source) {
+	
+	if (source == "modal01") {
+		var placeholder = document.getElementById("testModal01");
+		
+		placeholder.style.background = "orange";
+		
+	} else {
+	
+	}
+
+};
+
+
+
+
+
