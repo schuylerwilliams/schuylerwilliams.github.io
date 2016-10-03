@@ -12,12 +12,21 @@ $(document).ready(function() {
   });
   
   // Custom Navigation Events
-  $(".next").click(function(){
-    owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-    owl.trigger('owl.prev');
-  })
+	$(".next").click(function(){
+		owl.trigger('owl.next');
+	})
+	$(".prev").click(function(){
+		owl.trigger('owl.prev');
+	})
+  
+	$('.link').on('click', function(event){
+    	var $this = $(this);
+    	if($this.hasClass('clicked')){
+      	$this.removeAttr('style').removeClass('clicked');
+    	} else{
+      	$this.css('background','#7fc242').addClass('clicked');
+    	}
+  	});
   
   $('[data-toggle="tooltip"]').tooltip();
 });
