@@ -1,0 +1,21 @@
+Barren = Red
+Healthy Cropland = Green
+Snow = Yellow
+Water = Magenta
+Barren Cropland = Sea Green
+Forest = Cyan
+Urban = Maroon
+Grassland = Blue
+
+
+Barren = Yellow
+Healthy Cropland = Green
+Snow = White
+Water = Blue
+Barren Cropland = Orange
+Forest = Sea green
+Urban = red
+Grassland = Magenta
+
+
+wyoming
