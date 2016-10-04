@@ -21,5 +21,5 @@ function changeMenuClick(source) {
 }
 
 function clickedTheImage(source) {
-	window.open("https://schuylerwilliams.github.io");
+	window.open("https://schuylerwilliams.github.io", "_self");
 }
