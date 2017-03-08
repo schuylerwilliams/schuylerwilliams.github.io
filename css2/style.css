@@ -57,4 +57,18 @@
 
 #theImage {
 	cursor:pointer;
+	opacity: 1;
+	-webkit-transition: .15s opacity;
+	-moz-transition: .15s opacity;
+	-o-transition: .15s opacity;
+	transition: .15s opacity;
 }
+
+#theImage:hover {
+	opacity: .6;
+}
+
+
+
+
+
