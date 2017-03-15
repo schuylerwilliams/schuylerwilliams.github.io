@@ -1,5 +1,6 @@
 <html>
 <head>
+
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -10,9 +11,11 @@
         #map { position:absolute; top:0; bottom:0; width:80%;}
     </style>
 </head>
+
 <body>
 
-<div id='map'></div>
+	<div id='map'></div>
+
 <script>
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
 var map = new mapboxgl.Map({
@@ -22,6 +25,19 @@ var map = new mapboxgl.Map({
     pitch: 0.1,
     zoom: 11 // starting zoom
 });
+
+var colors = [
+	[1, '#EAFAF1'],
+	[10, '#EAFAF1'],
+	[20, '#EAFAF1'],
+	[30, '#82E0AA'],
+	[40, '#58D68D'],
+	[50, '#2ECC71'],
+	[60, '#28B463'],
+	[70, '#239B56'],
+	[80, '#1D8348'],
+	[90, '#186A3B']
+];
 
 map.on('load', function () {
 
@@ -36,8 +52,13 @@ map.on('load', function () {
         'type': 'fill',
         'layout': {},
         'paint': {
-            'fill-color': '#f08',
-            'fill-opacity': 0.4
+            'fill-color': {
+            	property: 'PNTCNT',
+            	type: 'interval',
+            	stops: colors
+            	
+            },
+            'fill-opacity': 1
         }
     });
 });
