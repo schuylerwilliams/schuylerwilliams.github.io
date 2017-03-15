@@ -58,8 +58,20 @@ map.on('load', function () {
             	stops: colors
             	
             },
-            'fill-opacity': 1
+            'fill-opacity': .6
         }
+    });
+    
+    map.addLayer({
+    	'id': 'trees-line',
+    	'source': 'tree',
+    	'type': 'line',
+    	'layout': {},
+    	'paint': {
+    		'line-color': 'black',
+    		'line-opacity': .6,
+    		'line-width': 1
+    	}
     });
 });
 </script>
