@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:80%;}
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2t5d2lsbGlhbXMiLCJhIjoibUI4TlByNCJ9.9UuhBU3ElNiesrd-BcTdPQ';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/skywilliams/cj00k83e3009o2so50xqebte6', //stylesheet location
+    center: [-89.4012, 43.0731], // starting position
+    pitch: 0.1,
+    zoom: 11 // starting zoom
+});
+
+map.on('load', function () {
+
+	map.addSource('tree', {
+        'type': 'geojson',
+        'url': 'trees.geojson'
+    });
+    
+    map.addLayer({
+        'id': 'trees-fill',
+        'source': 'tree',
+        'type': 'fill',
+        'layout': {},
+        'paint': {
+            'fill-color': '#f08',
+            'fill-opacity': 0.4
+        }
+    });
+});
+</script>s
