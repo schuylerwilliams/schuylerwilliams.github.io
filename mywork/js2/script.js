@@ -43,16 +43,16 @@ function changeMenuOut(source) {
 
 function changeMenuClick(source) {
 	if (source == "menuItem01") {
-		window.open("http://skywilliams.site/mywork/", "_self");
+		window.open("https://www.schuylerwilliams.github.io/mywork/", "_self");
 	} else if (source == "menuItem02") {
-		window.open("http://skywilliams.site/resume/", "_self");
+		window.open("https://www.schuylerwilliams.github.io/resume/", "_self");
 	} else if (source == "menuItem03") {
-		window.open("http://skywilliams.site/contact/", "_self");
+		window.open("https://www.schuylerwilliams.github.io/contact/", "_self");
 	}
 }
 
 function clickedTheImage(source) {
-	window.open("http://skywilliams.site", "_self");
+	window.open("https://www.schuylerwilliams.github.io", "_self");
 }
 
 
