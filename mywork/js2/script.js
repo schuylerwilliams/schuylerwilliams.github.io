@@ -43,16 +43,16 @@ function changeMenuOut(source) {
 
 function changeMenuClick(source) {
 	if (source == "menuItem01") {
-		window.open("https://www.schuylerwilliams.github.io/mywork/", "_self");
+		window.open("https://schuylerwilliams.github.io/mywork/", "_self");
 	} else if (source == "menuItem02") {
-		window.open("https://www.schuylerwilliams.github.io/resume/", "_self");
+		window.open("https://schuylerwilliams.github.io/resume/", "_self");
 	} else if (source == "menuItem03") {
-		window.open("https://www.schuylerwilliams.github.io/contact/", "_self");
+		window.open("https://schuylerwilliams.github.io/contact/", "_self");
 	}
 }
 
 function clickedTheImage(source) {
-	window.open("https://www.schuylerwilliams.github.io", "_self");
+	window.open("https://schuylerwilliams.github.io", "_self");
 }
 
 
@@ -101,17 +101,17 @@ function workHover(num, which) {
 
 function workClick(num) {
 	if (num == 1) {
-		window.open("http://skywilliams.site/lightpollution/");
+		window.open("https://schuylerwilliams.github.io/lightpollution/");
 	} else if (num == 2) {
 
 	} else if (num == 3) {
 		window.open("https://coastmapdevelop.github.io/greatlakes/");
 	} else if (num == 4) {
-		window.open("http://skywilliams.site/mywork//Module_10/");
+		window.open("https://schuylerwilliams.github.io/mywork//Module_10/");
 	} else if (num == 5) {
 		window.open("http://crisisplotter.xyz/");
 	} else if (num == 6) {
-		window.open("http://skywilliams.site/mywork/economic-geographer-575/");
+		window.open("https://schuylerwilliams.github.io/mywork/economic-geographer-575/");
 	} else if (num == 7) {
 		window.open("https://trainsg565.github.io");
 	} else if (num == 8) {
