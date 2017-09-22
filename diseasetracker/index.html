@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>CS Disease Tracker</title>
+
+<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="lib/leafletCluster/MarkerCluster.css">
+<link rel="stylesheet" href="lib/leafletCluster/MarkerCluster.Default.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<!--
+	<div id="intro">
+		<div id="firstArrow">
+		
+		</div>
+		
+		<div id="secondArrow">
+		
+		</div>
+		
+		<div id="thirdArrow">
+		
+		</div>
+		
+		<div id="introWelcome">
+		
+		</div>
+	</div>
+	-->
+	
+	
+	<div id="newHeader">
+		<h1>MappaDease</h1>
+	</div>
+	<!--
+	<div id="newHeader2">
+		<h3>Changing the way we think about disease tracking</h3>
+	</div>
+	-->
+	
+	<div id="newInfoHeader">
+		<p>MappaDease is a <b>crowd-sourced</b> and <b>collaborative</b> disease tracking application. Reports can be <b>viewed</b>, <b>filtered</b>, and <b>created</b> all within the options below. Our goal is to <b>change</b> the way we think about <b>disease tracking</b>.</p>
+	</div>
+	
+	
+	<div id="newSearchBar">
+		<input id="autocomplete2" placeholder="Search for a location">
+	</div>
+	
+	<div id="newAddReport">
+		<h4 data-toggle="modal" data-target="#myModal3">Create a Report</h4>
+	</div>
+	
+	
+	<div id="newQueryTab">
+		<ul class="nav nav-tabs nav-justified">
+  			<li class="active"><a data-toggle="tab" href="#home">Disease</a></li>
+  			<li><a data-toggle="tab" href="#menu1">Outcome</a></li>
+  			<li><a data-toggle="tab" href="#menu2">Year</a></li>
+		</ul>
+
+		<div class="tab-content">
+  			<div id="home" class="tab-pane fade in active" style="background: white; margin-top: 10px; height: 300px; overflow-y:auto; overflow-x: hidden;">
+    			<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock02" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Measles</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock03" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Mumps</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock04" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Rubella</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock05" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Hepatitis</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock06" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Tuberculosis</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock07" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>HIV</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock08" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Ebola</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock09" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>SARS</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock10" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Zika</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock11" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Yellow Fever</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock12" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Lyme Disease</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock13" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Hanta Virus</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock14" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>West Nile</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock15" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Avian Influenza</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock16" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Swine Influenza</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock17" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Polio</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock18" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Meningitis</p>
+						</div>
+					</div>
+  				</div>
+  			</div>
+  			<div id="menu1" class="tab-pane fade" style="background: white; margin-top: 10px;">
+  				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock19" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Symptoms (unconfirmed)</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock20" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Case (confirmed)</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock21" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Mortality</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock27" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>All</p>
+						</div>
+					</div>
+				</div>
+  			</div>
+  			<div id="menu2" class="tab-pane fade" style="background: white; margin-top: 10px;">
+    			<p>Time slider</p>
+  			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--
+	<div id="mainMenu">
+		<h1>MappaDease</h1>
+		<h4>Changing the way we think about disease tracking.</h4>
+		<h4 data-toggle="modal" data-target="#myModal">About</h4>
+		<h4 data-toggle="modal" data-target="#myModal2">Report Information</h4>
+		<h4 data-toggle="modal" data-target="#myModal3">Share</h4>
+		
+		<ul class="nav nav-tabs">
+  			<li class="active"><a data-toggle="tab" href="#tab01">Filters</a></li>
+  			<li><a data-toggle="tab" href="#tab02">Create Report</a></li>
+  			<li><a data-toggle="tab" href="#tab03">Search</a></li>
+		</ul>
+
+		<div class="tab-content">
+  			<div id="tab01" class="tab-pane fade in active">
+    			<div class="row" style="margin-top: 30px;">
+					<div class="col-sm-4">
+						<div id="sideBlock02" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Measles</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock03" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Mumps</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock04" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Rubella</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock05" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Hepatitis</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock06" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Tuberculosis</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock07" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>HIV</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock08" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Ebola</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock09" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>SARS</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock10" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Zika</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock11" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Yellow Fever</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock12" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Lyme Disease</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock13" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Hanta Virus</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock14" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>West Nile</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock15" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Avian Influenza</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock16" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Swine Influenza</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock17" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Polio</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock18" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+							<p>Meningitis</p>
+						</div>
+					</div>
+  				</div>
+  				
+  				<div class="row" style="margin-top: 30px;">
+					<div class="col-sm-4">
+						<div id="sideBlock19" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Symptoms (unconfirmed)</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock20" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Case (confirmed)</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock21" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>Mortality</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock27" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+							<p>All</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-sm-4">
+						<div id="sideBlock22" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+							<p>Civilian</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock23" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+							<p>Healthcare Worker</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock24" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+							<p>Laboratory Report</p>
+						</div>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="col-sm-4">
+						<div id="sideBlock25" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+							<p>Other</p>
+						</div>
+					</div>
+			
+					<div class="col-sm-4">
+						<div id="sideBlock26" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+							<p>All</p>
+						</div>
+					</div>
+				</div>
+  			</div>
+  			
+  			<div id="tab02" class="tab-pane fade">
+   			 	<form id="create_report_form" style="margin-top: 50px;">
+					<div class="mySelectForm">
+      					<select name="disease_type">
+      						<option value="">Choose the disease type</option>
+      						<option value="Measles">Measles</option>
+      						<option value="Mumps">Mumps</option>
+      						<option value="Rubella">Rubella</option>
+      						<option value="Hepatitis (B,C,A)">Hepatitis (B,C,A)</option>
+      						<option value="Tuberculosis">Tuberculosis</option>
+      						<option value="HIV/AIDS">HIV/AIDS</option>
+      						<option value="Ebola">Ebola</option>
+      						<option value="SARS">SARS</option>
+      						<option value="Zika">Zika</option>
+      						<option value="Yellow Fever">Yellow Fever</option>
+      						<option value="Lyme Disease">Lyme Disease</option>
+      						<option value="Hanta Virus">Hanta Virus</option>
+      						<option value="West Nile">West Nile</option>
+      						<option value="Avian Influenza (H5N1)">Avian Influenza</option>
+      						<option value="Swine Influenza (H1N1)">Swine Influenza</option>
+      						<option value="Polio">Polio</option>
+      						<option value="Meningitis">Meningitis</option>
+      					</select>
+      				</div>
+      				<div class="mySelectForm">
+      					<select name="report_type">
+      						<option value="">Choose the report type</option>
+      						<option value="Civilian">Civilian</option>
+      						<option value="Healthcare Worker">Healthcare Worker</option>
+      						<option value="Laboratory Report">Laboratory Report</option>
+      						<option value="Other">Other</option>
+      					</select>
+      				</div>
+      				<div class="mySelectForm">
+      					<select name="outcome_type">
+      						<option value="">Choose the outcome type</option>
+      						<option value="Symptoms (unconfirmed)">Symptoms (unconfirmed)</option>
+      						<option value="Case (confirmed)">Case (confirmed)</option>
+      						<option value="Mortality">Mortality</option>
+      					</select>
+      				</div>
+      				<div style="margin-left: 60px; margin-bottom: 10px;">
+      					<label><input type="radio" name="is_male" value="Male">&nbspMale</label>
+      					<label><input type="radio" name="is_male" value="Female">&nbspFemale</label>
+      					<label><input type="radio" name="is_male" value="Other">&nbspOther</label>
+      				</div>
+      				<div><input class="myInputForm" placeholder="Age" name="age"></div>
+      				<div>
+      					<input class="myInputForm" id="autocomplete" placeholder="Location">
+      				</div>
+      				<div>
+      					<textarea class="myInputForm" placeholder="Additional Message" name="message" rows="3"></textarea>
+      				</div>
+      				<button type="submit" class="btn btn-default" id="report_submit_btn" style="margin-bottom: 20px; margin-left: 90px;">
+      					<span class="glyphicon glyphicon-star"></span> Submit
+      				</button>
+      			</form>
+  			</div>
+  			
+ 			 <div id="tab03" class="tab-pane fade">
+    			<input id="autocomplete2" placeholder="Search for a location">
+  			</div>
+  			
+		</div>
+	</div>
+	
+	<div id="supMainMenu">
+	
+	</div>
+	-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--
+	<div id="bottomBlock">
+		<h1>MappaDease</h1>
+		<h4 data-toggle="modal" data-target="#myModal">About</h4>
+		<h4 data-toggle="modal" data-target="#myModal2">Report Information</h4>
+		<h4 data-toggle="modal" data-target="#myModal3">Share</h4>
+	</div>
+	
+	
+	
+	<div id="searchBlock" onclick="closeSearchBox(this.id)">
+		<i class="material-icons" style="color:white;margin-left:3px; margin-top:2px;">search</i>
+	</div>
+	
+	<div id="myFilterBox" onclick="closeFilterBox(this.id)">
+		<i class="material-icons" style="color:white;margin-left:3px;margin-top: 2px;">filter_list</i>
+	</div>
+	
+	<div id="myImportBlock" onclick="closeReportPanel(this.id)">
+		<i class="material-icons" style="color:white;margin-left:3px;margin-top:1px;">report_problem</i>
+	</div>
+	
+	
+	<div id="searchPanel">
+		<input id="autocomplete2" placeholder="Search for a location">
+	</div>
+	
+	<div id="filterBlock01">
+		<h4 id="firstPanelToggle" onclick="showFilterPanel01()">Showing <b id="firstPanelText">BLANK</b> reports</h4>
+		<i class="material-icons dropArrow">arrow_drop_down</i>
+		<h4 id="secondPanelToggle" onclick="showFilterPanel02()" style="margin-left: 25px;">With <b id="secondPanelText">BLANK</b> Outcome</h4>
+		<i class="material-icons dropArrow">arrow_drop_down</i>
+		<h4 id="thirdPanelToggle" onclick="showFilterPanel03()" style="margin-left: 25px;">And reported by <b id="thirdPanelText">BLANK</b></h4>
+		<i class="material-icons dropArrow">arrow_drop_down</i>
+	</div>
+	
+	<div id="filterPanel01" class="panelHidden">
+		<div id="filterPanel01Toggle" class="panelToggle" onclick="hideFilterPanel(this.id)">
+			<i class="material-icons" style="color:white;margin-left:.5px;">close</i>
+		</div>
+		
+		<div class="panelTitle">
+			<h4>Choose a disease to filter by:</h4>
+		</div>
+		
+		<div class="row" style="margin-top: 30px;">
+			<div class="col-sm-4">
+				<div id="sideBlock02" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Measles</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock03" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Mumps</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock04" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Rubella</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock05" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Hepatitis</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock06" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Tuberculosis</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock07" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>HIV</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock08" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Ebola</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock09" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>SARS</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock10" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Zika</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock11" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Yellow Fever</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock12" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Lyme Disease</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock13" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Hanta Virus</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock14" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>West Nile</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock15" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Avian Influenza</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock16" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Swine Influenza</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock17" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Polio</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock18" class="filterSideBlock01" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock(this.id)" onclick="highlightBlock(this.id)">
+					<p>Meningitis</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="filterPanel02" class="panelHidden">
+		<div id="filterPanel02Toggle" class="panelToggle" onclick="hideFilterPanel(this.id)">
+			<i class="material-icons" style="color:white;margin-left:.5px;">close</i>
+		</div>
+		
+		<div class="panelTitle">
+			<h4>Choose an outcome to filter by:</h4>
+		</div>
+		
+		<div class="row" style="margin-top: 30px;">
+			<div class="col-sm-4">
+				<div id="sideBlock19" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+					<p>Symptoms (unconfirmed)</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock20" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+					<p>Case (confirmed)</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock21" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+					<p>Mortality</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock27" class="filterSideBlock02" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock2(this.id)" onclick="highlightBlock2(this.id)">
+					<p>All</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="filterPanel03" class="panelHidden">
+		<div id="filterPanel03Toggle" class="panelToggle" onclick="hideFilterPanel(this.id)">
+			<i class="material-icons" style="color:white;margin-left:.5px;">close</i>
+		</div>	
+		
+		<div class="panelTitle">
+			<h4>Choose a report type to filter by:</h4>
+		</div>
+		
+		<div class="row" style="margin-top: 30px;">
+			<div class="col-sm-4">
+				<div id="sideBlock22" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+					<p>Civilian</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock23" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+					<p>Healthcare Worker</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock24" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+					<p>Laboratory Report</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4">
+				<div id="sideBlock25" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+					<p>Other</p>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<div id="sideBlock26" class="filterSideBlock03" onmouseover="mouseoverBlock(this.id)" onmouseout="mouseoutBlock3(this.id)" onclick="highlightBlock3(this.id)">
+					<p>All</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="createReportPanel">
+		<div id="createReportToggle" class="panelToggle" onclick="closeReportPanel()">
+			<i class="material-icons" style="color:white;margin-left:.5px;">close</i>
+		</div>
+		
+		<div class="panelTitle">
+			<h4>Create a Report:</h4>
+			
+			<form id="create_report_form" style="margin-top: 50px;">
+				<div class="mySelectForm">
+      				<select name="disease_type">
+      					<option value="">Choose the disease type</option>
+      					<option value="Measles">Measles</option>
+      					<option value="Mumps">Mumps</option>
+      					<option value="Rubella">Rubella</option>
+      					<option value="Hepatitis (B,C,A)">Hepatitis (B,C,A)</option>
+      					<option value="Tuberculosis">Tuberculosis</option>
+      					<option value="HIV/AIDS">HIV/AIDS</option>
+      					<option value="Ebola">Ebola</option>
+      					<option value="SARS">SARS</option>
+      					<option value="Zika">Zika</option>
+      					<option value="Yellow Fever">Yellow Fever</option>
+      					<option value="Lyme Disease">Lyme Disease</option>
+      					<option value="Hanta Virus">Hanta Virus</option>
+      					<option value="West Nile">West Nile</option>
+      					<option value="Avian Influenza (H5N1)">Avian Influenza</option>
+      					<option value="Swine Influenza (H1N1)">Swine Influenza</option>
+      					<option value="Polio">Polio</option>
+      					<option value="Meningitis">Meningitis</option>
+      				</select>
+      			</div>
+      			<div class="mySelectForm">
+      				<select name="report_type">
+      					<option value="">Choose the report type</option>
+      					<option value="Civilian">Civilian</option>
+      					<option value="Healthcare Worker">Healthcare Worker</option>
+      					<option value="Laboratory Report">Laboratory Report</option>
+      					<option value="Other">Other</option>
+      				</select>
+      			</div>
+      			<div class="mySelectForm">
+      				<select name="outcome_type">
+      					<option value="">Choose the outcome type</option>
+      					<option value="Symptoms (unconfirmed)">Symptoms (unconfirmed)</option>
+      					<option value="Case (confirmed)">Case (confirmed)</option>
+      					<option value="Mortality">Mortality</option>
+      				</select>
+      			</div>
+      			<div style="margin-left: 60px; margin-bottom: 10px;">
+      				<label><input type="radio" name="is_male" value="Male">&nbspMale</label>
+      				<label><input type="radio" name="is_male" value="Female">&nbspFemale</label>
+      				<label><input type="radio" name="is_male" value="Other">&nbspOther</label>
+      			</div>
+      			<div><input class="myInputForm" placeholder="Age" name="age"></div>
+      			<div>
+      				<input class="myInputForm" id="autocomplete" placeholder="Location">
+      			</div>
+      			<div>
+      				<textarea class="myInputForm" placeholder="Additional Message" name="message" rows="3"></textarea>
+      			</div>
+      			<button type="submit" class="btn btn-default" id="report_submit_btn" style="margin-bottom: 20px; margin-left: 90px;">
+      				<span class="glyphicon glyphicon-star"></span> Submit
+      			</button>
+      		</form>
+		</div>
+	</div>
+	-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+   			<!-- Modal content-->
+   			<div class="modal-content">
+      			<div class="modal-header">
+       				<button type="button" class="close" data-dismiss="modal">&times;</button>
+        			<h4 class="modal-title">About</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>CS (Crowd Sourced) Disease Tracker is a crowd-sourced viral and disease tracking application. It uses PostgreSQL and Google Maps API to display real-time disease tracking anywhere in the world.</p>
+        			<p>You are also able to report a case for a number of diseases, outcome types, and report types, which will then be publicly viewable by all other people viewing the map.</p>
+        			<p>Filter through various diseases, outcomes, and reports from the controls on the top-left to view those cases which match your criteria.</p>
+        			
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+  		</div>
+	</div>
+	
+	<!-- Modal -->
+	<div id="myModal2" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+   			<!-- Modal content-->
+   			<div class="modal-content">
+      			<div class="modal-header">
+       				<button type="button" class="close" data-dismiss="modal">&times;</button>
+        			<h4 class="modal-title">Report Information</h4>
+      			</div>
+      			<div class="modal-body">
+        			
+        			<h4>Disease Type: </h4>
+        			<p><b>Measles - </b>Measles is a highly contagious, serious disease caused by a virus. In 1980, before widespread vaccination, measles caused an estimated 2.6 million deaths each year.</p>
+        			<p><b>Mumps - </b>Mumps affects the parotid glands, salivary glands below and in front of the ears. The disease spreads through infected saliva.</p>
+        			<p><b>Rubella - </b>Rubella is an acute, contagious viral infection. While the illness is generally mild in children, it has serious consequences in pregnant women causing fetal death or congenital defects known as congenital rubella syndrome (CRS).</p>
+        			<p><b>Hepatitis (B,C,A) - </b>An inflammation of the liver.</p>
+        			<p><b>Tuberculosis - </b>Tuberculosis (TB) is caused by bacteria (Mycobacterium tuberculosis) that most often affect the lungs. Tuberculosis is curable and preventable.</p>
+        			<p><b>HIV/AIDS - </b>The Human Immunodeficiency Virus (HIV) targets the immune system and weakens people's defence systems against infections and some types of cancer. As the virus destroys and impairs the function of immune cells, infected individuals gradually become immunodeficient.</p>
+        			<p><b>Ebola - </b>The Ebola virus causes an acute, serious illness which is often fatal if untreated. Ebola virus disease (EVD) first appeared in 1976 in 2 simultaneous outbreaks, one in what is now, Nzara, South Sudan, and the other in Yambuku, Democratic Republic of Congo.</p>
+        			<p><b>SARS - </b>SARS appeared in 2002 in China. It spread worldwide within a few months, though it was quickly contained. SARS is a virus transmitted through droplets that enter the air when someone with the disease coughs, sneezes, or talks. No known transmission has occurred since 2004.</p>
+        			<p><b>Zika - </b>Zika virus is a mosquito-borne flavivirus that was first identified in Uganda in 1947 in monkeys through a network that monitored yellow fever. </p>
+        			<p><b>Yellow Fever - </b>Yellow fever is an acute viral haemorrhagic disease transmitted by infected mosquitoes. The "yellow" in the name refers to the jaundice that affects some patients.</p>
+        			<p><b>Lyme Disease - </b>Deer ticks can carry the bacteria that causes Lyme disease. Lyme disease causes a rash, often in a bull's-eye pattern, and flu-like symptoms. Joint pain and weakness in the limbs also can occur.</p>
+        			<p><b>Hanta Virus - </b>Infection with hantavirus can progress to Hantavirus Pulmonary Syndrome (HPS), which can be fatal. People become infected through contact with hantavirus-infected rodents or their urine and droppings. The Sin Nombre hantavirus, first recognized in 1993, is one of several New World hantaviruses circulating in the US. Old World hantaviruses, including Seoul virus, are found across the world and can cause Hemorrhagic Fever with Renal Syndrome (HFRS).</p>
+        			<p><b>West Nile - </b>West Nile Virus (WNV) can cause neurological disease and death in people. WNV is commonly found in Africa, Europe, the Middle East, North America and West Asia.</p>
+        			<p><b>Avian Influenza (H5N1) - </b>This type of flu is most often contracted by contact with sick birds. It can also be passed from person to person. The disease can carry a high mortality in humans. Some antiviral drugs, if taken within two days of symptoms, may help.</p>
+        			<p><b>Swine Influenza (H1N1) - </b>Swine flu was first recognized in the 1919 pandemic and still circulates as a seasonal flu virus. Swine flu is caused by the H1N1 virus strain, which started in pigs.</p>
+        			<p><b>Polio - </b>Polio is a highly infectious disease caused by a virus. It invades the nervous system, and can cause total paralysis in a matter of hours. The virus is transmitted by person-to-person spread mainly through the faecal-oral route or, less frequently, by a common vehicle (for example, contaminated water or food) and multiplies in the intestine.</p>
+        			<p><b>Meningitis - </b>Meningococcal meningitis is a bacterial form of meningitis, a serious infection of the meninges that affects the brain membrane. It can cause severe brain damage and is fatal in 50% of cases if untreated.</p>
+        			<hr>
+        			<br>
+        			
+        			<h4>Outcome Type: </h4>
+        			<p><b>Symptoms (unconfirmed) - </b>case reported only with symptoms, not a confirmed case.</p>
+        			<p><b>Case (confirmed) - </b>case reported confirmed for listed disease.</p>
+        			<p><b>Mortality - </b>case reported with mortality of individual, also indicates a confirmed case.</p>
+        			<hr>
+        			<br>
+        			
+        			<h4>Report Type: </h4>
+        			<p><b>Civilian - </b>case reported by civilian, no affiliation.</p>
+        			<p><b>Healthcare Worker - </b>case reported by a healthcare worker, affiliation.</p>
+        			<p><b>Laboratory Report - </b>case reported by a laboratory report, affiliation.</p>
+        			<p><b>Other - </b>case reported by any other entity or individual.</p>
+        			<hr>
+        			<br>
+        			
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+  		</div>
+	</div>
+	
+	<!-- Modal -->
+	<div id="myModal3" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+   			<!-- Modal content-->
+   			<div class="modal-content">
+      			<div class="modal-header">
+       				<button type="button" class="close" data-dismiss="modal">&times;</button>
+        			<h4 class="modal-title">Share</h4>
+      			</div>
+      			<div class="modal-body">
+        			<form id="create_report_form" style="margin-top: 50px;">
+						<div class="mySelectForm">
+      						<select name="disease_type">
+      							<option value="">Choose the disease type</option>
+      							<option value="Measles">Measles</option>
+      							<option value="Mumps">Mumps</option>
+      							<option value="Rubella">Rubella</option>
+      							<option value="Hepatitis (B,C,A)">Hepatitis (B,C,A)</option>
+      							<option value="Tuberculosis">Tuberculosis</option>
+      							<option value="HIV/AIDS">HIV/AIDS</option>
+      							<option value="Ebola">Ebola</option>
+      							<option value="SARS">SARS</option>
+      							<option value="Zika">Zika</option>
+      							<option value="Yellow Fever">Yellow Fever</option>
+      							<option value="Lyme Disease">Lyme Disease</option>
+      							<option value="Hanta Virus">Hanta Virus</option>
+      							<option value="West Nile">West Nile</option>
+      							<option value="Avian Influenza (H5N1)">Avian Influenza</option>
+      							<option value="Swine Influenza (H1N1)">Swine Influenza</option>
+      							<option value="Polio">Polio</option>
+      							<option value="Meningitis">Meningitis</option>
+      						</select>
+      					</div>
+      					<div class="mySelectForm">
+      						<select name="report_type">
+      							<option value="">Choose the report type</option>
+      							<option value="Civilian">Civilian</option>
+      							<option value="Healthcare Worker">Healthcare Worker</option>
+      							<option value="Laboratory Report">Laboratory Report</option>
+      							<option value="Other">Other</option>
+      						</select>
+      					</div>
+      					<div class="mySelectForm">
+      						<select name="outcome_type">
+      							<option value="">Choose the outcome type</option>
+      							<option value="Symptoms (unconfirmed)">Symptoms (unconfirmed)</option>
+      							<option value="Case (confirmed)">Case (confirmed)</option>
+      							<option value="Mortality">Mortality</option>
+      						</select>
+      					</div>
+      					<div style="margin-left: 60px; margin-bottom: 10px;">
+      						<label><input type="radio" name="is_male" value="Male">&nbspMale</label>
+      						<label><input type="radio" name="is_male" value="Female">&nbspFemale</label>
+      						<label><input type="radio" name="is_male" value="Other">&nbspOther</label>
+      					</div>
+      					<div><input class="myInputForm" placeholder="Age" name="age"></div>
+      					<div>
+      						<input class="myInputForm" id="autocomplete" placeholder="Location">
+      					</div>
+      					<div>
+      						<textarea class="myInputForm" placeholder="Additional Message" name="message" rows="3"></textarea>
+      					</div>
+      					<button type="submit" class="btn btn-default" id="report_submit_btn" style="margin-bottom: 20px; margin-left: 90px;">
+      						<span class="glyphicon glyphicon-star"></span> Submit
+      					</button>
+      				</form>
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+  		</div>
+	</div>
+	
+	
+	
+	<!-- create report modal -->
+	<div id="myModal4" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+
+   			<!-- Modal content-->
+   			<div class="modal-content">
+      			<div class="modal-header">
+       				<button type="button" class="close" data-dismiss="modal">&times;</button>
+        			<h4 class="modal-title">Create a Report</h4>
+      			</div>
+      			<div class="modal-body">
+        			<p>CS Disease Tracker is publicly available and open source on github, feel free to support and edit the code to deliver a better experience.</p>
+        			<p>If you believe that a disease should be added, or the reports should be edited in anyway, feel free to contact us with your suggestion.</p>
+        			
+      			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+
+  		</div>
+	</div>
+	<!-- create report modal -->
+	
+	
+	<div id="mapBlock">
+	
+	</div>
+	
+	
+	
+	<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="lib/leaflet/leaflet.js"></script>
+	<script src="lib/leafletCluster/leaflet.markercluster.js"></script>
+	<script src="lib/markerclusterer.js"></script> 
+	<script src="js/fontawesome-markers.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyAWjcmUtx_mV_9Cfwbd9IUmbVbbTigQPuU&signed_in=true&libraries=places,visualization"></script>
+	<script src="js/loadform.js"></script>
+	<script src="js/createReport.js"></script>
+	<script src="js/loadmap.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
