@@ -30,7 +30,11 @@ function initMap() {
 		strokeOpacity: 1
 	});
 	
-}
+};
+
+$(document).ready(function(){
+	initMap();
+});
 
 
 
