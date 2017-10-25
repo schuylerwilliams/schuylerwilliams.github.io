@@ -20,15 +20,13 @@ function initMap() {
     	fullscreenControl: false
 	});
 	
-	map.data.loadGeoJson('../data/elementary_boundaries.geojson');
-	map.data.loadGeoJson('../data/schools_v2.geojson');
+	map.data.loadGeoJson('elementary_boundaries.json');
 	map.data.setStyle({
   		fillColor: '#2687bf',
-  		fillOpacity: .3,
+  		fillOpacity: 1,
   		strokeWeight: 0
 	});
-	//map.data.addGeoJson(elementaryLayer);
-	//map.data.addGeoJson(schoolLayer);
+	
 	
 };
 
