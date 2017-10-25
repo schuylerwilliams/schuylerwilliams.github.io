@@ -20,7 +20,11 @@ function initMap() {
     	fullscreenControl: false
 	});
 	
-	map.data.loadGeoJson('elementary_boundaries.json');
+	$.getJSON('../elementary_boundaries.geojson', function(data) {
+		console.log(data);
+		var features = map.data.addGeoJson(data);
+	});
+	
 	map.data.setStyle({
   		fillColor: '#2687bf',
   		fillOpacity: 1,
