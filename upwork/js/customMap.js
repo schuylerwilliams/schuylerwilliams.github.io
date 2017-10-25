@@ -20,7 +20,9 @@ function initMap() {
     	fullscreenControl: false
 	});
 	
+	console.log('test');
 	$.getJSON('../elementary_boundaries.geojson', function(data) {
+		console.log('test');
 		console.log(data);
 		var features = map.data.addGeoJson(data);
 	});
