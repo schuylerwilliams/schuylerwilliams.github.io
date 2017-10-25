@@ -20,7 +20,7 @@ function initMap() {
     	fullscreenControl: false
 	});
 	
-	map.data.loadGeojson('../data/elementary_boundaries.geojson');
+	map.data.loadGeoJson('../data/elementary_boundaries.geojson');
 	map.data.loadGeojson('../data/schools_v2.geojson');
 	
 	map.data.setStyle({
