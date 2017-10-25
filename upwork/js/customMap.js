@@ -32,6 +32,10 @@ function initMap() {
 	
 };
 
+$(document).ready(function() {
+	initMap();
+});
+
 
 
 
