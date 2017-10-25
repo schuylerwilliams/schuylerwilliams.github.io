@@ -21,7 +21,7 @@ function initMap() {
 	});
 	
 	console.log('test');
-	$.getJSON('../elementary_boundaries.geojson', function(data) {
+	$.getJSON('../upwork/data/elementary_boundaries.geojson', function(data) {
 		console.log('test');
 		console.log(data);
 		var features = map.data.addGeoJson(data);
