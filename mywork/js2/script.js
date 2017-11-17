@@ -116,6 +116,10 @@ function workClick(num) {
 		window.open("https://trainsg565.github.io");
 	} else if (num == 8) {
 		window.open("https://bordnerlab.github.io/videopresentation/");
+	} else if (num == 9) {
+		window.open("https://onlinemapsorg.github.io/nixaPublicSchoolLocator/");
+	} else if (num == 10) {
+		window.open("https://onlinemapsorg.github.io/smithvillePublicSchool/");
 	}
 };
 
