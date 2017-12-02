@@ -20,15 +20,22 @@
 	<script src="oanda.js"></script>
 	<script>
 		$(document).ready(function() {
+			// Oanda API key
 			OANDA.auth.token = "8b7a380616ae835df5760a97b15e439e-a9e972f722ed01c2cecc304bf461800b";
+			// Unknown???
     		OANDA.auth.enabled = true;
+    		// Oanda trading URL
     		OANDA.baseURL = "https://api-fxpractice.oanda.com";
+    		// Oanda account ID
     		var activeAccountId = "101-001-7266625-001";
 			
+			// Get account information
     		OANDA.account.listSpecific(activeAccountId, function(response) {
         		console.log(response);
     		});
 			
+			// get rate quote
+			/*
 			OANDA.rate.quote(['EUR_USD'], function(response) {
     			if(response && !response.error) {
     				console.log(response.prices[0].bid);
@@ -37,7 +44,73 @@
         			// ...
     			}
 			});
+			*/
+			
+			// list all transactions for a specified account
+			/*
+			OANDA.transaction.list(activeAccountId, function(response) {
+				console.log(response);
+			});
+			*/
+			
+			// list all trades in account
+			/*
+			OANDA.trade.list(activeAccountId, function(response) {
+				console.log(response);
+			});
+			*/
+			
+			// list all orders in account
+			/*
+			OANDA.order.list(activeAccountId, function(response) {
+				console.log(response)
+			});
+			*/
+			
+			// create a new order
+			/*
+			* expiry and price are only required if order type is 'marketIfTouched', 'stop' or 'limit'
+			* Accepts optional parameters
+ 			* expiry       => string RFC 3339 format
+ 			* price        => number
+ 			* stopLoss     => number
+ 			* takeProfit   => number
+ 			* trailingStop => number
+ 			* upperBound   => number
+ 			* lowerBound   => number
+			*/
+			/*
+			OANDA.order.open(activeAccountId, instrument, units, side, type, function(response) {
+				console.log(reponse);
+			});
+			*/
+			
+			// list all positions
+			/*
+			OANDA.position.list(activeAccountId, function(reponse) {
+				console.log(response);
+			});
+			*/
     		
+    		
+			// return candlesticks for a specific isntrument
+			/*
+			* Accepts optional parameters:
+ 			* granularity  => string
+ 			* count        => number
+ 			* start        => string
+ 			* end          => string
+ 			* candleFormat => string
+ 			* includeFirst => boolean
+ 			*/
+ 			/*
+			OANDA.rate.history(symbol, function(reponse) {
+				console.log(response);
+			});
+			*/
+			
+			
+			
 		});
 	</script>
 </body>
