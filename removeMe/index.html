@@ -39,24 +39,27 @@
     		// live
     		/*var activeAccountId = "001-001-1733726-001";*/
     		// practice
-    		var activeAccountId = "101-001-266625-001";
-			
+    		//var activeAccountId = "101-001-266625-001";
+			var activeAccountId = "101-001-7266625-001";
 			
 			
 		
 			
 			// Get accounts
 			OANDA.account.get(function(response) {
+				console.log("one");
 				console.log(response);
 			});
 			
 			// List all accounts associated with user
 			OANDA.account.list(function(response) {
+				console.log("two");
 				console.log(response);
 			});
 			
 			// list specific account details
     		OANDA.account.listSpecific(activeAccountId, function(response) {
+    			console.log("three");
         		console.log(response);
     		});
 			
