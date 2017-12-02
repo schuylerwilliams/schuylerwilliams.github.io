@@ -21,13 +21,28 @@
 	<script>
 		$(document).ready(function() {
 			// Oanda API key
-			OANDA.auth.token = "9b0958a65768d29ed1d0c870ff0a86d8-6e6f3b6062099c95b80f33e34ce7fbe9";
+			// live
+			/*OANDA.auth.token = "9b0958a65768d29ed1d0c870ff0a86d8-6e6f3b6062099c95b80f33e34ce7fbe9";*/
+			// practice
+			OANDA.auth.token = "485c9028a32a04cb4c8545fcbb39f15f-27a09c795a62c0520374b8b50d021f38";
+			
 			// Unknown???
     		OANDA.auth.enabled = true;
+    		
     		// Oanda trading URL
-    		OANDA.baseURL = "https://api-fxtrade.oanda.com";
+    		// live
+    		/*OANDA.baseURL = "https://api-fxtrade.oanda.com";*/
+    		// practice
+    		OANDA.baseURL = "https://api-fxpractice.oanda.com";
+    		
     		// Oanda account ID
-    		var activeAccountId = "001-001-1733726-001";
+    		// live
+    		/*var activeAccountId = "001-001-1733726-001";*/
+    		// practice
+    		var activeAccountId = "101-001-7266625-001";
+			
+			
+			
 			
 			// Get account information
     		OANDA.account.listSpecific(activeAccountId, function(response) {
