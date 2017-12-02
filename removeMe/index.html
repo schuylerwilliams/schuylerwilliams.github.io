@@ -27,7 +27,7 @@
 			OANDA.auth.token = "485c9028a32a04cb4c8545fcbb39f15f-27a09c795a62c0520374b8b50d021f38";
 			
 			// Unknown???
-    		OANDA.auth.enabled = false;
+    		OANDA.auth.enabled = true;
     		
     		// Oanda trading URL
     		// live
@@ -43,8 +43,19 @@
 			
 			
 			
+		
 			
-			// Get account information
+			// Get accounts
+			OANDA.account.get(function(response) {
+				console.log(response);
+			});
+			
+			// List all accounts associated with user
+			OANDA.account.list(function(response) {
+				console.log(response);
+			});
+			
+			// list specific account details
     		OANDA.account.listSpecific(activeAccountId, function(response) {
         		console.log(response);
     		});

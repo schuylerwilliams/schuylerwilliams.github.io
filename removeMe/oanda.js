@@ -212,21 +212,21 @@ OANDA.account.register = function(currency, callback) {
  * Accepts no optional parameters
  */
 OANDA.account.get = function(callback) {
-    OANDA.api("/v1/accounts", 'GET', {}, callback);
+    OANDA.api("/v3/accounts", 'GET', {}, callback);
 };
 
 /* List all accounts associated with user
  * Accepts no optional parameters
  */
 OANDA.account.list = function(callback) {
-    OANDA.api("/v1/accounts", 'GET', {}, callback);
+    OANDA.api("/v3/accounts", 'GET', {}, callback);
 }
 
 /* List specific account details
  * Accepts no optional parameters
  */
 OANDA.account.listSpecific = function(accountId, callback) {
-    OANDA.api("/v1/accounts/" + accountId, 'GET', {}, callback);
+    OANDA.api("/v3/accounts/" + accountId, 'GET', {}, callback);
 }
 
 OANDA.rate = OANDA.rate || {};
