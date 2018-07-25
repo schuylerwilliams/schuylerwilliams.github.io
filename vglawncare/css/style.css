@@ -1,0 +1,110 @@
+
+
+/*First Page */
+#landingPage {
+	height: 100vh;
+	background: gray;
+}
+
+#landingPage #centerText {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white
+}
+
+#landingPage video {
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#topRightMenu {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: white;
+}
+
+#sideMenu {
+	position: absolute;
+	top: 0;
+	left: -200px;
+	width: 200px;
+	height: 100%;
+	background: black;
+	color: white;
+	text-align: center;
+}
+
+#toggleSideMenu {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: black;
+	color: white;
+	cursor: pointer;
+}
+/*//First Page*/
+
+
+
+
+/*Second Page*/
+#secondPage {
+	height: 100vh;
+	background: orange;
+}
+/*//Second Page*/
+
+
+
+
+
+/*Third Page*/
+#thirdPage {
+	height: 200vh;
+	background: white;
+}
+/*//Third Page*/
+
+
+
+
+
+
+
+
+/*Call To Action Banner*/
+#callToActionBanner {
+	height: 225px;
+	background: yellow;
+}
+/*//Call to Action Banner*/
+
+
+
+
+
+
+#lastPage {
+	height: 60vh;
+	background: white;
+}
+
+#bottomBanner {
+	height: 20vh;
+	background: black;
+}
+
+
+
+
+
+
+
