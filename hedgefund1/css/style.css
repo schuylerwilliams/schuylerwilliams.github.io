@@ -1,6 +1,52 @@
 
+#MainContainer {
+	background: red;
+	height: 100vh;
+}
 
+#mylogo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
+#box1 {
+	position: relative;
+	background: orange;
+	top: 15px;
+	left: 0px;
+	height: 300px;
+	width: 400px;
+}
+
+#box2 {
+	position: relative;
+	background: black;
+	top: -285px;
+	float: right;
+	height: 300px;
+	width: 400px;
+}
+
+#box3 {
+	position: relative;
+	background: gray;
+	top: 30px;
+	left: 0px;
+	height: 300px;
+	width: 400px;
+}
+
+#box4 {
+	position: relative;
+	background: green;
+	margin-top: -300px;
+	top: 30px;
+	float: right;
+	height: 300px;
+	width: 400px;
+}
 
 
 
