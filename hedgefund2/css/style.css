@@ -150,14 +150,93 @@ p.lead {
 }
 
 section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+	/*was previously 5*/
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
   max-width: 75rem;
 }
 
 section.resume-section .resume-item .resume-date {
   min-width: none;
 }
+
+
+
+
+
+/* _____________________________________________________________ */
+/*Start of custom CSS */
+
+
+
+#firstRow {
+	height: 100vh;
+	width: 100%;
+}
+#textBox1 {
+	height: 45%;
+	color: black;
+	font-size: 22px;
+}
+#textBox1 p {
+	margin-left: 35px;
+	margin-bottom:5px;
+}
+#firstText {
+	padding-top: 35px;
+}
+#infoBox1 {
+	height: 55%;
+	width: 50%;
+	border-top: 2px solid black;
+	color: black;
+	text-align: center;
+}
+#infoBox1 p {
+	margin-bottom: 0px;
+}
+#infoBox2 {
+	height: 55%;
+	width: 50%;
+	float: right;
+	margin-top: -55vh;
+	background: black;
+	color: white;
+	text-align: center;
+}
+#infoBox2 p {
+	margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*End of custom CSS */
+/* _____________________________________________________________ */
+
+
+
 
 @media (min-width: 768px) {
   section.resume-section {
@@ -170,8 +249,9 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 992px) {
   section.resume-section {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+  	/*was previously 3*/
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
   }
 }
 
