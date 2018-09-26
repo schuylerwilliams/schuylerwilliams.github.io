@@ -201,7 +201,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 #insideBox1 {
-	background: black;
+	background: #17202A;
 	height: 100%;
 	width: 40%;
 	margin-left: 60%;
@@ -209,7 +209,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 #insideBox2 {
-	background: orange;
+	background: gray;
 	height: 100%;
 	width: 60%;
 	margin-top: -55vh;
