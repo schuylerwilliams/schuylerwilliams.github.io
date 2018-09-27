@@ -107,7 +107,7 @@ p.lead {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 19rem;;
-    height: 45vh;
+    height: 50vh;
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
@@ -174,7 +174,7 @@ section.resume-section .resume-item .resume-date {
 	width: 100%;
 }
 #textBox1 {
-	height: 45%;
+	height: 50%;
 	color: black;
 	font-size: 22px;
 }
@@ -188,7 +188,7 @@ section.resume-section .resume-item .resume-date {
 
 #infoBox1 {
 	background: white;
-	height: 55%;
+	height: 50%;
 	width: 100vw;
 	margin-left: -17rem;
 	border-top: 2px solid black;
@@ -209,10 +209,10 @@ section.resume-section .resume-item .resume-date {
 }
 
 #insideBox2 {
-	background: gray;
 	height: 100%;
 	width: 60%;
-	margin-top: -55vh;
+	margin-top: -50vh;
+	border-top: 1px solid black;
 }
 
 
