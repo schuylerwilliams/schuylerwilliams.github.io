@@ -1,0 +1,487 @@
+
+html, body {
+	/*
+	overflow-x: hidden;
+	overflow-y: hidden;
+	*/
+	/*font-family: 'Rubik', sans-serif;*/
+	/*font-family: 'Poppins', sans-serif;*/
+	font-family: 'Cabin', sans-serif;
+	/*background: rgb(133, 193, 233);*/
+	background: #F4F6F6;
+	/*background-image: url(/img/backgrounds/path5.png);
+  	background-repeat: repeat;*/
+}
+
+
+
+#backgroundPage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+}
+
+
+/*HomePage01*/
+#homePage01 {
+	position: relative;
+	left: 0;
+	background: transparent;
+	width: 100%;
+	height: 100vh;
+	z-index: 12;
+}
+
+#mySpecialWrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 75px;
+	width: 60%;
+}
+
+
+#myTitle {
+	font-size: 100px;
+	padding-top: 100px;
+	color: black;
+	text-align: center;
+}
+#firstColor {
+	color: #2980B9;
+}
+#secondColor {
+	color: #1ABC9C;
+}
+#thirdColor {
+	color: #E67E22;
+}
+#fourthColor {
+	color: #FFC300;
+}
+
+#mySubTitle {
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+#myTestSubTitle {
+
+}
+
+#navButtons {
+	/*
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: auto;
+	height: auto;
+	*/
+	text-align: center;
+	margin-top: 40px;
+}
+
+.specialIcons i {
+	font-size: 50px;
+	color: #EC7063;
+}
+
+.specialBoxes {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: transparent;
+}
+
+/*
+.item {
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+*/
+
+#myEnterEmail {
+	margin-top: 50px;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+#mySignUpButton {
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+#myContactButton {
+	position: absolute;
+	right: 175px;
+	top: 16px;
+	font-size: 15px;
+	color: black;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+#myDownArrow {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+#myDownArrow i {
+	color: black;
+	font-size: 50px;
+}
+
+.hideButton {
+	visibility: hidden;
+}
+
+#everyoneButton {
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	border-bottom: 2px solid black;
+}
+
+#businessButton {
+	position: absolute;
+	left: 100px;
+	top: 0;
+	font-size: 20px;
+	cursor: pointer;
+	color: #A6ACAF;
+	border-bottom: 2px solid transparent;
+}
+
+#priceButton {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 20px;
+	cursor: pointer;
+	color: #A6ACAF;
+	border-bottom: 2px solid transparent;
+}
+
+#someNavButton {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 245px;
+	font-size: 20px;
+	visibility: visible;
+}
+
+#mobileMenuButton {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: auto;
+	width: auto;
+	visibility: hidden;
+	cursor: pointer;
+}
+#mobileMenuButton i {
+	font-size: 35px;
+}
+
+#locationSearch {
+	width: 100%;
+}
+/* homepage 01*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*homepage 02*/
+#homePage02 {
+	position: relative;
+	left: 0;
+	background:#fff;
+	width: 100%;
+	/*height: 100vh;*/
+	z-index: 12;
+}
+
+.myRow {
+	height: 100vh;
+}	
+
+.mySecondHomePage02 {
+	height: 100vh;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+
+
+#map01 {
+	width: 100%;
+	height: 100%;
+	background: #2980B9;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	border-radius: 150px;
+}
+#map01Text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 100px;
+	color: white;
+}
+#map02 {
+	width: 100%;
+	height: 100%;
+	background: #1ABC9C;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	border-radius: 150px;
+}
+#map02Text {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 25px;
+}
+#map02Text2 {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 25px;
+}
+#map03 {
+	width: 100%;
+	height: 100%;
+	background: #E67E22;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	border-radius: 150px;
+}
+/* homepage 02*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.single-item {
+	
+}
+
+.item {
+    /*color: #AAB7B8;*/
+    color: #A6ACAF;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#topMenuLeft1 {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	height: auto;
+	width: auto;
+	z-index: 11;
+}
+#topMenuLeft1 h4 {
+	font-weight: 600;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#topMenuLeft2 {
+	position: absolute;
+	left: 150px;
+	top: 10px;
+	height: auto;
+	width: auto;
+	z-index: 11;
+}
+#topMenuLeft2 h4 {
+	font-weight: 600;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.center {
+	color: white;
+	text-align: center;
+}
+
+.Qpointer {
+	cursor: pointer;
+}
+
+#initForm input{
+	width: 75%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.form-actions {
+    margin: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+#forgotText {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#registerText {
+	margin-top: 30px;
+}
+
+#registerForm input{
+	width: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#smallScreenFilter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 10;
+    visibility: visible;
+}
+/*Init*/
+
+
+
+
+
+#homePage03 {
+	position: relative;
+	left: 0;
+	background: #FFC300;
+	width: 100%;
+	height: 50vh;
+	z-index: 12;
+}
+
+
+
+
+
+
+#homePage04 {
+	position: relative;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 70vh;
+	z-index: 12;
+}
+
+
+
+
+
+
+
+
+#homePage05 {
+	position: relative;
+	left: 0;
+	background: gray;
+	width: 100%;
+	height: 30vh;
+	z-index: 12;
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+	
+	/*
+	#myWrapperLogin {
+		top: 20px;
+		left: 50px;
+		width: 400px;
+		height: 600px;
+		background: transparent;
+	}
+	*/
+	
+
+}
+
+@media screen and (max-width: 800px) {
+    #myTitle {
+		font-size: 80px;
+	}
+	
+	#mobileMenuButton {
+		visibility: visible;
+	}
+	
+	#someNavButton {
+		visibility: visible;
+	}
+
+}

@@ -1,0 +1,1110 @@
+
+html, body {
+	overflow-x: hidden;
+	/*font-family: 'Rubik', sans-serif;*/
+	/*font-family: 'Poppins', sans-serif;*/
+	font-family: 'Cabin', sans-serif;
+	background: #F2F3F4;
+    /*background: rgb(137, 214, 197);*/
+}
+
+
+
+
+
+
+
+
+
+
+#loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -60px 0 0 -60px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #1ABC9C;
+	border-right: 16px solid #FFC300;
+	border-bottom: 16px solid #E67E22;
+	border-left: 16px solid #2980B9;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	-o-animation: spin 2s linear infinite;
+	-ms-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	z-index: 1010;
+	visibility: visible;
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/*Welcome*/
+#profileButton {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #2980B9;
+	z-index: 1001;
+	cursor: pointer;
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	border-radius: 50px;
+	/*
+	-webkit-box-shadow: 2px 2px 5px black;
+	-moz-box-shadow: 2px 2px 5px black;
+	-o-box-shadow: 2px 2px 5px black;
+	box-shadow: 2px 2px 5px black;
+	*/
+}
+#profileButton i {
+	font-size: 36px;
+	text-align: center;
+}
+
+#supButton01 {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #1ABC9C;
+	z-index: 1001;
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	border-radius: 50px;
+}
+#supButton01 i {
+	font-size: 36px;
+	text-align: center;
+}
+
+#supButton02 {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFC300;
+	z-index: 1001;
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	border-radius: 50px;
+}
+#supButton02 i {
+	font-size: 36px;
+	text-align: center;
+}
+
+#supButton03 {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #E67E22;
+	z-index: 1001;
+	height: 36px;
+	width: 36px;
+	background: transparent;
+	border-radius: 50px;
+}
+#supButton03 i {
+	font-size: 36px;
+	text-align: center;
+}
+
+
+#filterCreateWrap {
+	position: absolute;
+	bottom: 210px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1001;
+	width: 125px;
+	background: transparent;
+	visibility: hidden;
+}
+
+#filterButton {
+	/*
+	position: absolute;
+	bottom: 210px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	color: #5D6D7E;
+	z-index: 1001;
+	*/
+	cursor: pointer;
+	/*
+	height: 28px;
+	width: 80px;
+	*/
+	/*
+	display: inline-flex;
+	vertical-align: middle;
+	*/
+	/*visibility: hidden;*/
+	/*
+	border-radius: 50px;
+	*/
+	/*
+	background: rgba(255,255,255,1);
+	-webkit-box-shadow: 2px 2px 5px black;
+	-moz-box-shadow: 2px 2px 5px black;
+	-o-box-shadow: 2px 2px 5px black;
+	box-shadow: 2px 2px 5px black;
+	*/
+}
+
+#filterButton i {
+	color: #1ABC9C;
+}
+
+/*
+#filterButton p {
+	position: absolute;
+	top: 0;
+	left: 7.5px;
+	font-size: 20px;
+}
+#filterButton i {
+	position: absolute;
+	top: 5px;
+	right: 7.5px;
+	font-size: 20px;
+}
+*/
+	
+#viewTodaysEventsButton {
+    /*
+	position: absolute;
+	bottom: 80px;
+	right: 20px;
+	color: #154360;
+	z-index: 1001;
+	cursor: pointer;
+	height: 36px;
+	width: 175px;
+	font-size: 20px;
+	border-radius: 50px;
+	visibility: visible;
+	background: rgba(255,255,255,1);
+	-webkit-box-shadow: 2px 2px 5px black;
+	-moz-box-shadow: 2px 2px 5px black;
+	-o-box-shadow: 2px 2px 5px black;
+	box-shadow: 2px 2px 5px black;
+    */
+    position: absolute;
+    bottom: 105px;
+    right: 0;
+    color: #154360;
+    cursor: pointer;
+    height: 36px;
+    width: 175px;
+    font-size: 20px;
+    border-radius: 50px;
+    background: rgba(255,255,255,1);
+}
+
+#viewTodaysEventsButton i{
+	font-size: 36px;
+	position: absolute;
+	top: 0;
+	right: 5px;
+
+}
+#viewTodaysEventsButton p {
+	margin-top: 4px;
+	margin-bottom: 0;
+	padding-left: 5px;
+}
+
+#testNewMyEventsButton {
+    /*
+	position: absolute;
+	bottom: 80px;
+	left: 20px;
+	color: #154360;
+	z-index: 1001;
+	cursor: pointer;
+	height: 36px;
+	width: 150px;
+	font-size: 20px;
+	border-radius: 50px;
+	visibility: visible;
+	background: rgba(255,255,255,1);
+	-webkit-box-shadow: 2px 2px 5px black;
+	-moz-box-shadow: 2px 2px 5px black;
+	-o-box-shadow: 2px 2px 5px black;
+	box-shadow: 2px 2px 5px black;
+    */
+    position: absolute;
+    bottom: 105px;
+    left: 0;
+    color: #154360;
+    cursor: pointer;
+    height: 36px;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 50px;
+    background: rgba(255,255,255,1);
+}
+#testNewMyEventsButton i {
+	font-size: 36px;
+	position: absolute;
+	top: 0;
+	left: 5px;
+}
+#testNewMyEventsButton p {
+	margin-top: 4px;
+	margin-bottom: 0;
+	padding-right: 5px;
+	text-align: right;
+}
+
+
+#createAndFilterWrapper {
+    position: absolute;
+    bottom: 100px;
+    background: transparent;
+    /*width: 400px;*/
+    width: 100%;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1001;
+    visibility: hidden;
+}
+
+#expandedPopUp {
+	position: absolute;
+	bottom: 100px;
+	background: white;
+	width: 400px;
+	height: 100px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1010;
+	visibility: hidden;
+	-webkit-transition: .25s width, .25s height, .25s bottom;
+	-moz-transition: .25s width, .25s height, .25s bottom;
+	-o-transition: .25s width, .25s height, .25s bottom;
+	transition: .25s width, .25s height, .25s bottom;
+}
+
+#expandedPopUp i {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+
+.createCarousel {
+	width: 100%;
+	height: 100%;
+	background: #EAEDED;
+}
+
+.caroItem {
+	text-align: center;
+	font-size: 30px;
+	background: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100%;
+	height: 100px;
+	color: black;
+	background: white;
+	cursor: pointer;
+}
+
+.caroItem p {
+	font-size: 16px;
+}
+
+.caroItemActive {
+	background: #2471A3;
+	color: white;
+}
+
+
+#bottomMenu {
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	height: 50px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border-top: 1px solid #808B96;
+	z-index: 1001;
+}
+
+#myButtonMenu {
+	position: absolute;
+	bottom: 50px;
+	background: #fff;
+	width: 100%;
+	height: 70px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1001;
+	visibility: hidden;
+}
+
+.myEventButtons {
+	margin-top: 10px;
+}
+
+.supBottomActive {
+	background: #D7DBDD;
+}
+#supBottom01 {
+	position:absolute;
+	top: 0;
+	left:0;
+	height: 100%;
+	width: 25%;
+	cursor: pointer;
+}
+#supBottom02 {
+	position:absolute;
+	top: 0;
+	left:25%;
+	height: 100%;
+	width: 25%;
+	cursor: pointer;
+}
+#supBottom03 {
+	position:absolute;
+	top: 0;
+	left:50%;
+	height: 100%;
+	width: 25%;
+	cursor: pointer;
+}
+#supBottom04 {
+	position:absolute;
+	top: 0;
+	left:75%;
+	height: 100%;
+	width: 25%;
+	cursor: pointer;
+}
+
+
+
+
+#createEventButton {
+	cursor: pointer;
+	/*
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #154360;
+    color: white;
+    border-radius: 7px;
+    text-align: center;
+    width: auto;
+    z-index: 1001;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #000000;
+    */
+}
+#createEventButton i {
+	color: #E67E22;
+}
+
+#chooseEventButton {
+	position: absolute;
+	bottom: 80px;
+	background: #154360;
+	color: white;
+	border-radius: 7px;
+	text-align: center;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	z-index: 1002;
+	cursor: pointer;
+	visibility: hidden;
+	font-size: 27px;
+	/*
+	-webkit-box-shadow: 3px 4px 6px black;
+	-moz-box-shadow: 3px 4px 6px black;
+	-o-box-shadow: 3px 4px 6px black;
+	box-shadow: 3px 4px 6px black;
+	*/
+}
+
+#viewMyEventsButton {
+	position: absolute;
+	bottom: 80px;
+	background: #154360;
+	color: white;
+	border-radius: 7px;
+	text-align: center;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	z-index: 1001;
+	cursor: pointer;
+	visibility: visible;
+	font-size: 27px;
+}
+
+#profileMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	z-index: 1010;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+#friendMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	z-index: 1010;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+.supMenuActive {
+	visibility: visible;
+}
+.supMenuNotActive {
+	visibility: hidden;
+}
+
+#messageMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	z-index: 1010;
+	visibility: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+#myEventsMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	z-index: 1010;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+#teamMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	z-index: 1010;
+	visibility: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+}
+
+#settingsMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    text-align: center;
+    z-index: 1010;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+    
+}
+
+.mySupMenuToggle {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.mySupMenuToggleL {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#testBubble01 {
+    position: absolute;
+    bottom: 75px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background: #154360;
+    color: white;
+    border-radius: 50px;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 1001;
+}
+#testBubble01 i {
+	font-size: 100px;
+}
+
+#testBubble02 {
+    position: absolute;
+    bottom: 75px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background: #CB4335;
+    color: white;
+    border-radius: 50px;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 1001;
+}
+#testBubble02 i {
+	font-size: 100px;
+}
+
+
+
+#profileMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 90vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	-webkit-transition: .25s left;
+	-moz-transition: .25s left;
+	-o-transition: .25s left;
+	transition: .25s left;
+	z-index: 1010;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#profileMenu h1 {
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+#profileIcon {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: white;
+}
+
+#profileIcon i {
+	font-size: 100px;
+	color: black;
+}
+
+#closeProfileMenu {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+#settingsProfileMenu {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 36px;
+	cursor: pointer;
+}
+
+.myPanel {
+	display: inline-flex;
+	vertical-align: middle;
+    font-size: 17px;
+}
+.clickyPanel {
+	cursor: pointer;
+}
+
+#filterMenu {
+	position: relative;
+	/*top: 0;*/
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: white;
+	text-align: center;
+	-webkit-transition: .25s left;
+	-moz-transition: .25s left;
+	-o-transition: .25s left;
+	transition: .25s left;
+	z-index: 1010;
+    visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	
+	-webkit-animation-duration: .4s;
+	-moz-animation-duration: .4s;
+	-o-animation-duration: .4s;
+	animation-duration: .4s;
+	
+}
+
+#filterMenu h1 {
+	margin-top: 0;
+	padding-top: 10px;
+}
+
+#filterMenu i {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 36px;
+	cursor: pointer;
+	/*
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	*/
+}
+
+#myWrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100vh;
+	background: #F2F3F4;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+#popUpContent {
+	position: absolute;
+	height: 175px;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: 30px;
+	background: white;
+	z-index: 1010;
+	text-align: center;
+	border-radius: 5px;
+	visibility: hidden;
+	-webkit-box-shadow: 2px 2px 5px black;
+	-moz-box-shadow: 2px 2px 5px black;
+	-o-box-shadow: 2px 2px 5px black;
+	box-shadow: 2px 2px 5px black;
+	-webkit-transition: height .5s, width .5s, border-radius .5s, bottom .5s;
+	-moz-transition: height .5s, width .5s, border-radius .5s, bottom .5s;
+	-o-transition: height .5s, width .5s, border-radius .5s, bottom .5s;
+	transition: height .5s, width .5s, border-radius .5s, bottom .5s;
+}
+
+
+#popUpContent i {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	font-size: 36px;
+}
+
+#teamGroup {
+	/*
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 65px;
+	line-height: 65px;
+	visibility: hidden;
+	*/
+	position: absolute;
+	top: 65px;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 65px;
+	line-height: 65px;
+	visibility: hidden;
+}
+
+#redTeamBlock {
+	width: 40%;
+	height: 100%;
+	float:left;
+	background: #CB4335;
+	color: white;
+	border-radius: 4px;
+}
+#redTeamBlock p {
+	font-size: 16px;
+}
+
+#blueTeamBlock {
+	width: 40%;
+	height: 100%;
+	float: right;
+	background: #154360;
+	color: white;
+	border-radius: 4px;
+}
+#blueTeamBlock p {
+	font-size: 16px;
+}
+
+#noTeamGroup {
+	position: absolute;
+	top: 65px;
+	width: 90%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 65px;
+	line-height: 65px;
+	visibility: hidden;
+}
+#noTeamBlock {
+	width: 60%
+	height: 100%;
+	background: #CB4335;
+	color: white;
+	border-radius: 4px;
+}
+#noTeamBlock p {
+	font-size: 16px;
+}
+
+
+
+#map {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+}
+
+.mapboxgl-popup {
+	max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+#expandToSeeMore {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#filterMarkerForm {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.pac-container {
+	z-index: 10000;
+}
+
+#joinedEventPopUp {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1050;
+	visibility: hidden;
+}
+
+#createEventPopUp {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1050;
+	visibility: hidden;
+}
+
+#resetFilterPopUp {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1050;
+    visibility: hidden;
+}
+
+#removeMeFromEventButton {
+    position: absolute;
+    bottom: 50px;
+    visibility: hidden;
+}
+
+#eventDescription {
+	position: absolute;
+	top: 175px;
+	visibility: hidden;
+}
+
+#chooseEventLocationPrompt {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    visibility: hidden;
+    z-index: 1001;
+}
+
+#chooseEventLocationPrompt h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+#mainLocationSearch {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50%;
+	height: auto;
+	z-index: 1001;
+	font-size: 20px;
+}
+
+#changeLocationMap {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 200px;
+	z-index: 1001;
+	border: 3px solid #00B4CC;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	-webkit-transition: .5s top;
+	-moz-transition: .5s top;
+	-o-transition: .5s top;
+	transition: .5s top;
+}
+/*Welcome*/
+
+
+
+#joinEventButton2 {
+	position: absolute;
+	bottom: 10px;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+
+
+
+#todaysEventsInsideSlider {
+	position: absolute;
+	width: 100px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1005;
+	width: 120px;
+	cursor: pointer;
+	top: 80px;
+	background: white;
+	border: 1px solid black;
+	height: auto;
+}
+
+#sliderWrapper {
+	position: relative;
+}
+
+/* for roundslider */
+#myTimeSlider {
+	position: relative;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	opacity: 1;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+.rs-control .rs-range-color {
+    background-color: #54bbe0;
+}
+.rs-control .rs-path-color {
+    background-color: white;
+}
+.rs-control .rs-handle {
+    background-color: #838383;
+}
+.rs-control .rs-bg-color {
+    background-color: white;
+}
+/* for roundslider */
+
+
+@media screen and (min-width: 1000px) {
+	#myWrapper {
+		width: 100%;
+	}
+	
+	#myWrapperLogin {
+		top: 20px;
+		right: 50px;
+		width: 400px;
+		height: 600px;
+		background: transparent;
+	}
+    
+    #smallScreenFilter {
+        visibility: hidden;
+    }
+    
+    /*
+    #createAndFilterWrapper {
+    	bottom: 0px;
+    	background: white;
+    	width: 400px;
+    	height: 100vh;
+    	left: 0;
+    	margin-left: 0;
+    	z-index: 1001;
+	}
+	*/
+	
+	#testBubble01 {
+		left: 30%;
+	}
+	
+	#testBubble02 {
+		right: 30%;
+	}
+	
+	.createCarousel {
+		width: 80%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 400px) {
+    
+    #createAndFilterWrapper {
+        width: 100%;
+    }
+    
+    #bottomMenu {
+    	width: 100%;
+    }
+    
+    #myButtonMenu {
+    	width: 100%;
+    }
+}
