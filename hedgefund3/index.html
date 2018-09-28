@@ -129,15 +129,19 @@
 				<h1 style="color: #2980B9; font-size: 50px;">Growth</h1>
 				<h3>Annual Percentage Yield</h3>
 				<h4 style="color: #A6ACAF; padding-left: 10px; padding-right: 10px;">Will be updating daily; check back to see where we're at. See more for historical changes.</h4>
-
+				
+				<!--<canvas id="line-chart" width="800" height="450"></canvas>-->
 			</div>
 			<div class="col-sm-6">
 				<div class="myHomeMap">
+					<canvas id="line-chart" width="800" height="450"></canvas>
+					<!--
 					<div id="map01">
 						<div id="map01Text">
 							25%
 						</div>
 					</div>
+					-->
 				</div>
 				<!--<img class="img-circle" src="img/act/find.jpg" alt="Chania" width="300px" height="300px">-->
 			</div>
@@ -148,10 +152,14 @@
 				<h1 style="color: #1ABC9C; font-size: 50px;">Fees</h1>
 				<h3>The best things in life ain't free</h3>
 				<h4 style="color: #A6ACAF; padding-left: 10px; padding-right: 10px;">Values for management fee and percentage gain fee. Possibility for example link and more explanation.</h4>
+				
+				<!--<canvas id="bar-chart" width="800" height="450"></canvas>-->
 			</div>
 			
 			<div class="col-sm-6">
 				<div class="myHomeMap">
+					<canvas id="bar-chart" width="800" height="450"></canvas>
+					<!--
 					<div id="map02">
 						<div id="map02Text">
 							1% Management Fee
@@ -161,6 +169,7 @@
 							10% Profit Fee
 						</div>
 					</div>
+					-->
 				</div>
 				<!--<img class="img-circle" src="img/act/join.jpg" alt="Chania" width="300px" height="300px">-->
 			</div>
@@ -337,6 +346,8 @@
     <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     
     <script src="lib/slick/slick.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     
     <script src="js/business.js"></script>
 </body>

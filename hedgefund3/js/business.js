@@ -105,6 +105,7 @@ $(document).ready(function() {
 	};
 	
 	createRandomMarker();
+
 });
 
 $(window).resize(function() {
@@ -112,7 +113,7 @@ $(window).resize(function() {
     //$("#svg2").attr("height", window.innerHeight);
 });
 
-
+/*
 // Initialize Firebase
 var config = {
 	apiKey: "AIzaSyAnbODzHrh6lFX06xkgEFp0J2AmP9LpUto",
@@ -140,14 +141,6 @@ $("form#locationSearchForm").submit(function(e) {
 	var locationSearch = $("#locationSearch").val();
 		
 	anonIn = true;
-	/*
-	firebase.auth().signInAnonymously().catch(function(error) {
-  		// Handle Errors here.
-  		var errorCode = error.code;
-  		var errorMessage = error.message;
-  		// ...
-	});
-	*/
 });
   	
 var loggedIn = false;
@@ -179,6 +172,9 @@ btnSignUp.addEventListener('click', e => {
   	promise.catch(e => console.log(e.message));
   	signedUp = true;
 });
+
+
+*/
   	
 // sign out event
 /*
@@ -189,6 +185,7 @@ btnLogout.addEventListener('click', e => {
   	
 // add a realtime listener
   	
+/*
 firebase.auth().onAuthStateChanged(user => {
 	if(user) {
   		if (user.isAnonymous == true) {
@@ -230,6 +227,95 @@ function writeUserData(userId, email) {
   	});
 };
 
+*/
+
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["Profit", "Management Fee", "Profit Fee"],
+      datasets: [
+        {
+          label: "Label!",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+          data: [2478,5267,734]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: false,
+        text: 'Predicted world population (millions) in 2050'
+      },
+      layout: {
+      	padding: {
+      		left: 0,
+      		right: 25,
+      		top: 0,
+      		bottom: 0
+      	}
+      },
+      legend: {
+      	display: false
+      },
+      scales: {
+      	xAxes: [{
+      		gridLines: {
+      			display: false
+      		}
+      	}],
+      	yAxes: [{
+      		gridLines: {
+      			display: false
+      		}
+      	}]
+      }
+    }
+});
+
+
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct"],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,2478],
+        label: "Growth",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: false,
+      text: 'World population per region (in millions)'
+    },
+    layout: {
+    	padding: {
+    		left: 0,
+    		right: 25,
+    		top: 0,
+    		bottom: 0
+    	}
+    },
+    legend: {
+    	display: false
+    },
+    scales: {
+    	xAxes: [{
+    		gridLines: {
+    			display: false
+    		}
+    	}],
+    	yAxes: [{
+    		gridLines: {
+    			display: false
+    		}
+    	}]
+    }
+  }
+});
 
 
 
