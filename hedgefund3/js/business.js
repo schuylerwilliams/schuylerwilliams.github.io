@@ -43,6 +43,8 @@ $(document).ready(function() {
 	}, 1250);
 	*/
 	
+	
+	/*
 	var homePage = document.getElementById("backgroundPage");
 	
 	setInterval(function() {
@@ -103,8 +105,9 @@ $(document).ready(function() {
 			$(box).animateCss("bounceIn");
 		}
 	};
+	*/
 	
-	createRandomMarker();
+	/*createRandomMarker();*/
 
 });
 
