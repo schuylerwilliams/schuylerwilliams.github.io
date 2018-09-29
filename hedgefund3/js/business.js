@@ -229,14 +229,16 @@ function writeUserData(userId, email) {
 
 */
 
+
+/*Charts*/
 new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
       labels: ["Profit", "Management Fee", "Profit Fee"],
       datasets: [
         {
-          label: "Label!",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+          label: "",
+          backgroundColor: ["#2980B9", "#E67E22","#FFC300"],
           data: [2478,5267,734]
         }
       ]
@@ -279,8 +281,8 @@ new Chart(document.getElementById("line-chart"), {
   data: {
     labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct"],
     datasets: [{ 
-        data: [86,114,106,106,107,111,133,221,783,2478],
-        label: "Growth",
+        data: [4,6,2,-1,5,10,15,10,20,22],
+        label: "Percentage: ",
         borderColor: "#3e95cd",
         fill: false
       }
@@ -316,6 +318,29 @@ new Chart(document.getElementById("line-chart"), {
     }
   }
 });
+/*Charts*/
+
+
+
+/*Slider */
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider2.oninput = function() {
+    output2.innerHTML = this.value;
+}
+/*Slider */
 
 
 
