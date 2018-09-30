@@ -383,6 +383,7 @@ slider2.oninput = function() {
     currentSliderCapital = slider.value;
     newProfit = Math.round(currentSliderCapital * currentSliderPercentage);
 	
+	
     
     newProfitFee = Math.round(newProfit * .1);
     
