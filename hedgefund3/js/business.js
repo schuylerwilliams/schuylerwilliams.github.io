@@ -234,7 +234,7 @@ function writeUserData(userId, email) {
 
 
 /*Charts*/
-new Chart(document.getElementById("bar-chart"), {
+var myBarChart = new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
       labels: ["Profit", "Management Fee", "Profit Fee"],
@@ -242,7 +242,7 @@ new Chart(document.getElementById("bar-chart"), {
         {
           label: "",
           backgroundColor: ["#2980B9", "#E67E22","#FFC300"],
-          data: [2478,5267,734]
+          data: [150,10,15]
         }
       ]
     },
@@ -272,14 +272,36 @@ new Chart(document.getElementById("bar-chart"), {
       	yAxes: [{
       		gridLines: {
       			display: false
+      		},
+      		ticks: {
+      			beginAtZero:true,
+      			callback: function(value, index, values) {
+      				if(parseInt(value) >= 1000){
+      					return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      				} else {
+      					return '$' + value;
+      				}
+      			}
       		}
       	}]
+      },
+      tooltips: {
+      	callbacks: {
+      		label: function(tooltipItem, data) {
+    			var value = data.datasets[0].data[tooltipItem.index];
+    			if(parseInt(value) >= 1000){
+    				return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    			} else {
+    				return '$' + value;
+    			}
+    		}
+      	}
       }
     }
 });
 
 
-new Chart(document.getElementById("line-chart"), {
+var myLineChart = new Chart(document.getElementById("line-chart"), {
   type: 'line',
   data: {
     labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct"],
@@ -333,6 +355,20 @@ output.innerHTML = slider.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
     output.innerHTML = this.value;
+    
+    currentSliderPercentage = slider2.value / 100;
+    currentSliderCapital = this.value;
+    newProfit = Math.round(currentSliderCapital * currentSliderPercentage);
+    
+    newManagementFee = Math.round(currentSliderCapital * .01);
+    
+    newProfitFee = Math.round(newProfit * .1);
+    
+    myBarChart.data.datasets[0].data[0] = newProfit;
+    myBarChart.data.datasets[0].data[1] = newManagementFee;
+    myBarChart.data.datasets[0].data[2] = newProfitFee;
+    myBarChart.update();
+    
 }
 
 var slider2 = document.getElementById("myRange2");
@@ -342,9 +378,21 @@ output2.innerHTML = slider2.value; // Display the default slider value
 // Update the current slider value (each time you drag the slider handle)
 slider2.oninput = function() {
     output2.innerHTML = this.value;
+    
+    currentSliderPercentage = this.value / 100;
+    currentSliderCapital = slider.value;
+    newProfit = Math.round(currentSliderCapital * currentSliderPercentage);
+    
+    newProfitFee = Math.round(newProfit * .1);
+    
+    myBarChart.data.datasets[0].data[0] = newProfit;
+    myBarChart.data.datasets[0].data[2] = newProfitFee;
+    myBarChart.update();
 }
 /*Slider */
 
+console.log(myBarChart.data.datasets[0].data);
+console.log(myBarChart.data.labels);
 
 
 
